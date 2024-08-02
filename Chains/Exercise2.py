@@ -6,5 +6,6 @@
 
 name =input("Give me your full name: ")
 
-print(name.lower)
-print(name.upper)
+print(name.lower())
+print(name.upper())
+print(name.title())
