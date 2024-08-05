@@ -7,4 +7,6 @@ name=input("Introduce the name of the product: ")
 price=float("Introduce the price: ")
 units=int("Introduce number of units: ")
 
+print()
+
 
