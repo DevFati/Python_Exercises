@@ -4,9 +4,9 @@
 
 
 name=input("Introduce the name of the product: ")
-price=float("Introduce the price: ")
-units=int("Introduce number of units: ")
+price=float(input("Introduce the price: "))
+units=int(input("Introduce number of units: "))
 
-print("The product "+name+ ". Each unit costs ",price," euros.")
+print("The product "+name+ ". Each unit costs "+"{:09.2f}".format(price)+" euros. The number of units is {:03}".format(units)+". The final cost is {:011.2f}".format(price*units))
 
-
+#The 0 is put in front of the 9 so that the missing spaces are filled with 0. It is put in 9 because there are 6 digits plus 2 decimals plus the comma, which makes them 9.
