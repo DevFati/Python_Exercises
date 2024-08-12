@@ -1,0 +1,4 @@
+#Write a program that stores the subjects of a course (for example Mathematics, Physics, Chemistry, 
+# History and Language) in a list and displays it on the screen.
+
+
