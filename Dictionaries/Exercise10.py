@@ -36,17 +36,30 @@ while option!=6:
         database[nif]=val
     elif(option==2):
         nif=input("Introduce the nif of the client taht you want to delete: ")
-        database.pop(nif)
+        if nif in database:
+            database.pop(nif)
+        else:
+            print("No client found with that nif")
     elif(option==3):
         nif=input("Enter the nif of the client you want to consult data about: ")
-        print(database[nif])
+        if nif in database:
+            print(database[nif])
+        else:
+            print("No costumer found with that nif")
     elif(option==4):
-        for i in database: 
-            print(i+" -->"+database[i][name])
+        if database:
+            for i in database: 
+                print(i+" -->"+database[i]["name"])
+        else:
+            print("No customers in the database")
+        
+
     elif(option==5):
         for i in database:
-            if(i[preferred]):
-                print(i+" -->"+database[i][name])
+            if(database[i]["preferred"]=="True"):
+                print(i+" -->"+database[i]["name"])
+    elif(option==6):
+        print("Bye")
     else:
         print("Introduce a valid option")
 
