@@ -23,5 +23,20 @@ customer_data="nif;name;email;telephone;discount\n01234567L;Luis González;luisg
 
 client_list=customer_data.split("\n")
 
-directory=[]
+directory={}
 
+field_list=client_list[0].split(";")
+
+for i in client_list[1:]:
+    #starts to iterate in the second element
+    client={}
+    info_list=i.split(";")
+    for j in range(1,len(field_list)):
+        if field_list[j]=="discount":
+            info_list[j]=float(info_list[j])
+
+        client[field_list[j]]=info_list[j]
+
+    directory[info_list[0]]=client
+
+print(directory)
